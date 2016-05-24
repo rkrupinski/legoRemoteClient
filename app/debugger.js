@@ -7,17 +7,23 @@ import state$ from './state';
 class Debugger extends Component {
   render() {
     return (
-      <View>
-        <Text style={styles.debuggerOutput}>{this.props.inputType}</Text>
+      <View style={styles.debugger}>
+        <Text style={styles.debuggerOutput}>steer: {this.props.steer}</Text>
+        <Text style={styles.debuggerOutput}>drive: {this.props.drive}</Text>
       </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
+  debugger: {
+    flex: 1,
+    paddingTop: 20,
+    alignItems: 'center',
+  },
   debuggerOutput: {
     color: '#fff',
-    fontSize: 30,
+    fontSize: 14,
     fontWeight: 'bold',
     fontFamily: 'Courier New',
   },

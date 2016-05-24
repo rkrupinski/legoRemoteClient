@@ -14,7 +14,7 @@ class Button extends Component {
           onPressIn={this.props.onPressIn}
           onPressOut={this.props.onPressOut}>
         <View style={styles.button}>
-          <Icon name={this.props.icon} color="#fff" size={height / 6} />
+          <Icon name={this.props.icon} color="#fff" size={height / 3} />
         </View>
       </TouchableOpacity>
     );
@@ -23,12 +23,12 @@ class Button extends Component {
 
 const styles = StyleSheet.create({
   button: {
-    width: height / 2.75,
-    height: height / 2.75,
+    width: height / 1.5,
+    height: height / 1.5,
     alignItems: 'center',
     justifyContent: 'center',
-    borderWidth: height / 30,
-    borderRadius: height / 15,
+    borderWidth: height / 20,
+    borderRadius: height / 10,
     borderColor: '#fff',
   },
 });

@@ -1,5 +1,6 @@
 import React, { Component} from 'react';
 
+import constants from './constants';
 import actions from './actions';
 import connect from './connect';
 import state$ from './state';
@@ -18,13 +19,13 @@ class ButtonReverse extends Component {
 
 export default connect(state$, state => ({
   onPressIn() {
-    actions.input$.onNext({
-      type: 'reverse',
+    actions.drive$.onNext({
+      direction: constants.BACKWARD,
     });
   },
   onPressOut() {
-    actions.input$.onNext({
-      type: 'neutral',
+    actions.drive$.onNext({
+      direction: constants.NEUTRAL,
     });
   },
 }))(ButtonReverse);

@@ -1,7 +1,8 @@
 import { Subject } from 'rx';
 
 const actions = {
-  input$: new Subject(),
+  drive$: new Subject(),
+  steer$: new Subject(),
 };
 
 export default actions;
